@@ -1,0 +1,65 @@
+
+
+Exemple : https://www.geeksforgeeks.org/cpp/quine-a-self-reproducing-program/
+
+main() 
+{ 
+    char *s="main() { char *s=%c%s%c; printf(s,34,s,34); }"; 
+    printf(s,34,s,34); 
+}
+
+
+
+
+=================== DEFINITION ===================
+
+
+Un quine est un ordi qui ne prend aucun input et produit une 
+copie de son code source
+
+"self replicating programs"
+
+
+de "philosopher Willard Van Orman Quine (1908–2000), who made an extensive study of indirect self-reference" wikipedia
+
+
+
+Pas le droit de print en ouvrant le fichier et read, il faut "compute" son propre code 
+
+CAD
+
+
+
+
+=================== INTERET ===================
+
+* Savoir faire un programme auto replicant pour qu il se reecrive partout 
+
+(hack)
+
+
+* comprendre cette forme de "recursivite"
+
+=================== SHORTEST ===================
+
+            ($=_=>`($=${$})()`)()
+
+=================== RAPPORT AVEC LES FIXED POINT ===================
+
+
+RIEN A VOIRE AVEC les fixed de cpp modules.
+
+
+en mathematique  f(x) = x    est un point fixe
+
+pour une courbe donne on a tant de points fixe f(1) = 1  peut y en avoir d autres.
+
+https://major-prepa.com/mathematiques/tout-savoir-points-fixes/
+
+
+
+Donc un quine est un "point fixe" pour le compilateur / interpreteur.
+
+le binaire d entre donne le binaire de sortie
+
+
