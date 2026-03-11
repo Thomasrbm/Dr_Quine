@@ -11,6 +11,14 @@ main()
 
 
 
+
+CELUI DE COLLEEN .c
+
+
+possible uniquement car printf a deja la string toute en memoire avant de la print donc il peut print la string sans "avoir fini de la lire" = dinguerie, inception
+
+
+
 =================== DEFINITION ===================
 
 
