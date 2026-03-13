@@ -1,17 +1,20 @@
-The executable must be named Sully.
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-
-• When executed the program writes in a file named Sully_X.c / Sully_X.s. The X
-will be an integer given in the source. Once the file is created, the program compiles
-this file and then runs the new program (which will have the name of its source file).
-
-• Stopping the program depends on the file name: the resulting program will be ex-
-ecuted only if the integer X is greater or equals than 0.
-
-• An integer is therefore present in the source of your program and will have to evolve
-by decrementing every time you create a source file from the execution of the pro-
-gram.
-
-
-• You have no constraints on the source code, apart from the integer that will be set
-to 5 at first.
+int main()
+{
+    int nb = 5;
+    if (nb >= 0)
+    {
+        FILE *f = fopen("Sully_5", "w");
+        char *s = "#include <stdio.h>%1$c#include <string.h>%1$c#include <stdlib.h>%1$c%1$cint main()%1$c{%1$c%2$cint nb = %3$c;%1$c%2$cif (nb >= 0)%1$c%2$c{%1$c%2$c    FILE *f = fopen(%4$cSully_%3$c%4$c, %4$cw%4$c);%2$c%2$c%1$c%2$c%2$cchar *s = %4$c%5$c%4$c;%1$c%2$c%2$cfprintf(f, s, 10, 9, (nb - 1), 34, s);%1$c%2$c%2$cfclose(f);%1$c%2$c%2$cchar *cmd = %4$cgcc Sully_%3$c%4$c;%1$c%2$c%2$csystem(cmd)%1$c%2$c%2$cchar *exec = %4$c./Sully_%3$c%4$c;%1$c%2$c%2$csystem(exec)%1$c%2$c}%1$c%2$creturn (0);%1$c}";
+        fprintf(f, s, 10, 9, (nb - 1), 34, s);
+        fclose(f);
+        char *cmd = "gcc Sully_5";
+        system(cmd);
+        char *exec = "./Sully_5";
+        system(exec);
+    }
+    return (0);
+}
