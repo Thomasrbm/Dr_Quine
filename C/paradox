@@ -1,0 +1,17 @@
+
+
+printf("hello");
+
+
+printf("printf("hello")");
+
+
+printf("printf(\"hello\")"); => on doit l afficher etc donc : printf("printf(\"hello\")");
+
+
+infini
+
+
+meme probleme si la chaine  s = %1$c 
+
+MAIS que des '\n' dans le printf.  donc use les ascci 10, 34 etc

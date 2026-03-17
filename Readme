@@ -71,3 +71,23 @@ Donc un quine est un "point fixe" pour le compilateur / interpreteur.
 le binaire d entre donne le binaire de sortie
 
 
+
+
+
+=============================== les cmds ================================
+
+
+
+FILE *   = une structure qui wrap le fd pour les commande printf
+
+system = mieux car  parsing  fait côté shell, (exec un /bin/sh qui parse pour execve).  N utilise pas fork() — qui est un wrapper de clone()  [syscall reel] - avec toujours les mêmes paramètres qui dupliquent toute la mémoire — 
+
+=> mais posix_spawn, cette ft adapte les flags de clone() selon ses besoins.
+
+
+=============================== sully ================================
+
+
+Idee 1 :  exec un prog sur 2 et ecrire 2 prog d un coup
+Idee 2 : 2 int un origine et un derived
+Idee 3 : poru la premiere iteration verif si ya deja un fichier de sortie (savoir que premier) et faire cas special pour premier ainsi
